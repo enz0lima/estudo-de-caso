@@ -1,0 +1,33 @@
+Os livros contêm as seguintes informações: 
+
+1. nome
+2. Autor
+3. Quantidade de páginas 
+4. Preço - em reais? casas decimais?
+5. Flag - ativo/inativo - valor de referência
+6. Data de inclusão/edição 
+
+Regras: 
+
+1. Designer arquitetural - MVC
+2. Usabilidade do sistema - view
+3. Não pode ter livros duplicados 
+4. A quantidade de páginas e preço não podem ser inferiores a zero.
+5. O banco adotado é relacional 
+6. A exclusão não é física - apenas lógica inativando o livro - mantendo o histórico 
+7. O valor inicial da flag - inativo - na listagem ele aparece para edição.
+8. Preço - tem uma função para formatação de reais - padrão brasileiro. 
+
+Detalhes da arquitetura: 
+
+1. Arquivo de configuração - init.php
+2. Model - arquivos de conexão com a base de dados 
+3. Controller - onde ficam as regras de interação banco e view
+4. View - telas do sistema 
+5. CRUD 
+6. SQL de criação da tabela livro cedido.
+
+Erro e ajustes: 
+1. banco.php - ajustes linha 32 para retornar o $result no lugar de $array
+2. cadastro.php - ajustes no method - de get para post.
+3. editar.php - alterar linha 14 type de number para text.
